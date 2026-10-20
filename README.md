@@ -1,91 +1,96 @@
-# 💸 Billing API - Sistema de Faturamento
+<div align="center">
+  <!-- Ícone representativo de Faturamento/API -->
+  <img src="https://img.icons8.com/fluency/96/000000/invoice.png" alt="Ícone de Faturamento" width="80"/>
+  
+  <h1>Billing API: Faturamento & GitFlow</h1>
 
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
-![GitFlow](https://img.shields.io/badge/GitFlow-Practices-orange)
+  <p>
+    <img src="https://img.shields.io/badge/version-1.0.1-blue.svg?style=for-the-badge" alt="Version">
+    <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/FastAPI-API_REST-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+    <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+    <img src="https://img.shields.io/badge/GitFlow-Practices-FF4F00?style=for-the-badge&logo=git&logoColor=white" alt="GitFlow">
+  </p>
 
-Uma API RESTful desenvolvida em Python para gerenciamento de clientes e processamento de faturas. 
+  <p><em>API RESTful estruturada para gerenciamento financeiro e demonstração prática do ciclo de vida de software corporativo.</em></p>
+</div>
 
-Este projeto foi construído especificamente para aplicar e demonstrar o domínio do **ciclo de vida de desenvolvimento de software utilizando GitFlow**, simulando um ambiente corporativo real com criação de features, releases e correção de bugs em produção (hotfixes).
+<br>
 
-## 🚀 Funcionalidades
+<h2>Descritivo:</h2>
+<p>
+  Este projeto consiste em uma <b>API RESTful</b> desenvolvida em Python para gerenciamento de clientes e processamento de faturas. Ele foi construído especificamente para aplicar e demonstrar o domínio de versionamento de código utilizando <b>GitFlow</b>.
+</p>
+<p>
+  A aplicação simula um ambiente corporativo real. Todo o desenvolvimento foi fragmentado metodicamente entre criação de <i>features</i> (módulos de cadastro e faturamento), preparação de <i>releases</i> e a aplicação de <i>hotfixes</i> para correção de bugs mapeados diretamente em produção, garantindo estabilidade na branch principal.
+</p>
 
-- **Gestão de Clientes:** Cadastro e listagem de clientes (com validação de documento).
-- **Faturamento:** Geração de faturas atreladas aos clientes.
-- **Validação de Regra de Negócio:** Bloqueio automático de faturas com valores negativos ou zerados.
+<br>
 
-## 🛠️ Tecnologias Utilizadas
+<h2> Principais Funcionalidades</h2>
 
-- **[FastAPI](https://fastapi.tiangolo.com/):** Framework web moderno e de alta performance.
-- **[Uvicorn](https://www.uvicorn.org/):** Servidor ASGI leve e rápido.
-- **[SQLAlchemy](https://www.sqlalchemy.org/):** ORM para comunicação e modelagem do banco de dados.
-- **[Pydantic](https://docs.pydantic.dev/):** Validação de dados e serialização.
-- **SQLite:** Banco de dados relacional leve para desenvolvimento.
+<table>
+  <tr>
+    <td width="200"><b>Gestão de Clientes</b></td>
+    <td>Cadastro e listagem de clientes na base de dados, garantindo a validação e a unicidade de documentos (CPF/CNPJ).</td>
+  </tr>
+  <tr>
+    <td><b>Faturamento</b></td>
+    <td>Geração ágil de faturas atreladas via chave estrangeira (Foreign Key) aos clientes previamente cadastrados.</td>
+  </tr>
+  <tr>
+    <td><b>Regras de Negócio</b></td>
+    <td>Bloqueio automático e validação estrita com Pydantic para impedir a criação de faturas com valores negativos ou zerados.</td>
+  </tr>
+  <tr>
+    <td><b>Integração com ORM</b></td>
+    <td>Comunicação assíncrona com o banco de dados relacional SQLite utilizando SQLAlchemy, garantindo integridade das transações.</td>
+  </tr>
+</table>
 
-## 🌿 Arquitetura de Branches (GitFlow)
+<br>
 
-O histórico de commits deste repositório reflete as melhores práticas de versionamento. As seguintes ramificações foram utilizadas:
+<h2>🌿 Arquitetura de Branches (GitFlow)</h2>
 
-- `main`: Código em produção, sempre estável e espelhando as versões lançadas (Tags: `v1.0.0`, `v1.0.1`).
-- `develop`: Ramo principal de integração onde as novas funcionalidades são testadas.
-- `feature/*`: Branches temporárias para o desenvolvimento de novos módulos (ex: `feature/cadastro-clientes`).
-- `release/*`: Preparação e polimento para o lançamento de uma nova versão.
-- `hotfix/*`: Ramificações de emergência criadas a partir da `main` para corrigir bugs críticos em produção (ex: `hotfix/bloqueio-fatura-negativa`).
+<p>O histórico de commits deste repositório reflete rigorosamente as melhores práticas de versionamento:</p>
 
-## ⚙️ Como Executar Localmente
+<table>
+  <tr>
+    <td width="150"><code>main</code></td>
+    <td>Código em produção, sempre estável e espelhando as versões lançadas (Tags: <b>v1.0.0</b>, <b>v1.0.1</b>).</td>
+  </tr>
+  <tr>
+    <td><code>develop</code></td>
+    <td>Ramo principal de integração onde as novas funcionalidades se encontram e são testadas.</td>
+  </tr>
+  <tr>
+    <td><code>feature/*</code></td>
+    <td>Branches ramificadas a partir da <i>develop</i> para desenvolvimento de novos módulos isolados.</td>
+  </tr>
+  <tr>
+    <td><code>release/*</code></td>
+    <td>Preparação, documentação e polimento do código para o lançamento de uma nova versão.</td>
+  </tr>
+  <tr>
+    <td><code>hotfix/*</code></td>
+    <td>Ramificações de emergência criadas a partir da <i>main</i> para corrigir bugs críticos em produção.</td>
+  </tr>
+</table>
 
-### Pré-requisitos
-- Python 3.10 ou superior.
-- Git.
+<br>
 
-### Passo a Passo
+<h2>📂 Arquitetura do Sistema</h2>
 
-1. Clone o repositório:
-```bash
-git clone [https://github.com/SEU_USUARIO/fastapi-billing-api.git](https://github.com/SEU_USUARIO/fastapi-billing-api.git)
-cd fastapi-billing-api
-
-```
-
-2. Crie e ative um ambiente virtual:
-
-```bash
-# Linux/macOS
-python3 -m venv venv
-source venv/bin/activate
-
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-```
-
-3. Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-
-```
-
-4. Inicie o servidor local:
-
-```bash
-uvicorn main:app --reload
-
-```
-
-5. Acesse a documentação interativa (Swagger UI) gerada automaticamente pelo FastAPI:
-👉 **[http://127.0.0.1:8000/docs](https://www.google.com/search?q=http://127.0.0.1:8000/docs)**
-
-## 📚 Endpoints Principais
-
-| Método | Rota | Descrição |
-| --- | --- | --- |
-| `GET` | `/` | Retorna o status de saúde da API. |
-| `POST` | `/clientes` | Cria um novo cliente recebendo `nome` e `documento`. |
-| `POST` | `/faturas` | Gera uma fatura recebendo `cliente_id`, `valor` e `descricao`. |
-
----
-
-*Desenvolvido para fins de estudo e composição de portfólio.*
+<details>
+  <summary><b>Clique para visualizar a estrutura do projeto</b></summary>
+  <br>
+  
+  ```text
+  ├── main.py               # Rotas FastAPI e inicialização do servidor Uvicorn
+  ├── models.py             # Modelagem das tabelas do banco (SQLAlchemy)
+  ├── schemas.py            # Validação de dados de entrada e saída (Pydantic)
+  ├── database.py           # Configuração de conexão e sessão do SQLite
+  ├── billing.db            # Banco de dados SQLite (gerado automaticamente)
+  ├── .gitignore            # Arquivos ignorados pelo Git (venv, caches, db)
+  ├── requirements.txt      # Mapeamento de dependências
+  └── README.md             # Documentação do projeto
