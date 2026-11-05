@@ -50,35 +50,6 @@
 
 <br>
 
-<h2>🌿 Arquitetura de Branches (GitFlow)</h2>
-
-<p>O histórico de commits deste repositório reflete rigorosamente as melhores práticas de versionamento:</p>
-
-<table>
-  <tr>
-    <td width="150"><code>main</code></td>
-    <td>Código em produção, sempre estável e espelhando as versões lançadas (Tags: <b>v1.0.0</b>, <b>v1.0.1</b>).</td>
-  </tr>
-  <tr>
-    <td><code>develop</code></td>
-    <td>Ramo principal de integração onde as novas funcionalidades se encontram e são testadas.</td>
-  </tr>
-  <tr>
-    <td><code>feature/*</code></td>
-    <td>Branches ramificadas a partir da <i>develop</i> para desenvolvimento de novos módulos isolados.</td>
-  </tr>
-  <tr>
-    <td><code>release/*</code></td>
-    <td>Preparação, documentação e polimento do código para o lançamento de uma nova versão.</td>
-  </tr>
-  <tr>
-    <td><code>hotfix/*</code></td>
-    <td>Ramificações de emergência criadas a partir da <i>main</i> para corrigir bugs críticos em produção.</td>
-  </tr>
-</table>
-
-<br>
-
 <h2>📂 Arquitetura do Sistema</h2>
 
 <details>
