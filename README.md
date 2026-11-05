@@ -2,7 +2,7 @@
   <!-- Ícone representativo de Faturamento/API -->
   <img src="https://img.icons8.com/fluency/96/000000/invoice.png" alt="Ícone de Faturamento" width="80"/>
   
-  <h1>Billing API: Faturamento & GitFlow</h1>
+  <h1>Billing API: Faturamento</h1>
 
   <p>
     <img src="https://img.shields.io/badge/version-1.0.1-blue.svg?style=for-the-badge" alt="Version">
